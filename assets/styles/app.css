@@ -1,3 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap'); */
+/*
+@font-face {
+  font-family: Oswald;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/oswald-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("../fonts/oswald-variablefont_wght-webfont.woff")
+      format("woff"),
+      url("../fonts/oswald-variablefont_wght.svg")
+      format("svg"),
+    url("../fonts/oswald-variablefont_wght.ttf")
+      format("ttf");
+}
+*/
+
+
 /*************************
          VARIABLES
 *************************/
@@ -21,12 +39,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  line-height: 1.2em;
 }
 
 body {
   font-size: var(--fontSize);
   background-color: var(--colorBG_light);
   color: var(--colorFont_dark);
+}
+
+p {
+  margin-bottom: 0.5em;
 }
 
 li {
@@ -43,9 +66,14 @@ a:visited {
 }
 
 .title-section {
+  margin-bottom: 0.2em;
   font-size: 2.6rem;
   text-align: center;
   color: var(--colorBrand_first)
+}
+
+.hidden-in-mobile {
+  display: none;
 }
 
 
@@ -54,7 +82,7 @@ a:visited {
 *************************/
 .header {
   padding: 0.25rem 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   position: sticky;
   z-index: 100;
   top: 0;
@@ -81,6 +109,26 @@ a:visited {
 
 
 /*************************
+    C O N T E N T S
+*************************/
+.contents, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-details {
+  padding: 0 1.6rem;
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.services > .section-details ul li {
+  margin-left: 2.0rem;
+  list-style-type: square;
+}
+
+/*************************
     PRINCIPAL SECTIONS
 *************************/
 .service-item {
@@ -96,6 +144,21 @@ a:visited {
   z-index: 4;
   color: var(--colorFont_light);
   text-shadow: -2px 2px 4px var(--colorFont_dark);
+  filter: drop-shadow(0 0 0.4em black);
+}
+
+.service-item__picture, img {
+  width: 100%;
+}
+
+.contact-us {
+  width: 100%;
+}
+
+.contact-us__email,
+.contact-us__phone,
+.contact-us__city {
+  margin: 0;
 }
 
 
