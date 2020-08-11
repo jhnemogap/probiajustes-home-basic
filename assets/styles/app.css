@@ -15,11 +15,12 @@
   --colorFont_dark: #12212e;
 }
 
-
 /*************************
       Standar Rules
 *************************/
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -31,9 +32,9 @@ body {
   background-color: var(--colorBG_light);
   color: var(--colorFont_dark);
   font-weight: normal;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-                "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", 
-                "Segoe UI Emoji", "Segoe UI Symbol","Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 p {
@@ -58,10 +59,11 @@ small {
 }
 
 .title-section {
+  margin-top: 0.7rem;
   margin-bottom: 0.2em;
   font-size: 2.6rem;
   text-align: center;
-  color: var(--colorBrand_first)
+  color: var(--colorBrand_first);
 }
 
 button {
@@ -74,30 +76,54 @@ button {
   display: none;
 }
 
+.hidden-toggle {
+  display: none;
+}
 
 /*************************
          HEADER
-*************************/
-.header {
-  padding: 0.25rem 0.5rem;
+ *************************/
+.header-container {
   margin-bottom: 0.6rem;
   position: sticky;
   z-index: 100;
   top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fefeff;
-  box-shadow: 0px 0.2rem 0.8rem 0px var(--colorBrand_second--2);
 }
 
-.header-logo {
+.header {
+  display: grid;
+  grid-template: auto auto / auto 1fr auto;
+  column-gap: 1em;
+  row-gap: 0.4em;
+  padding: 0.5rem 1rem;
+  justify-content: space-around;
+  background-color: #fefeff;
+  box-shadow: 0px 0.2rem 0.4rem 0px var(--colorBrand_second--2);
+}
+
+.header__logo {
   width: fit-content;
 }
 
-.header-logo > .logo {
+.header__logo > .logo {
   width: 70%;
+}
+
+/* +++ Menu icon adjustments in the header +++ */
+.header__menu-icon {
+  grid-column-start: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__menu-icon:hover {
+  cursor: pointer;
+}
+
+.header__nav {
+  grid-row-start: 2;
+  grid-column: 1 / 4;
 }
 
 .menu-icon {
@@ -110,10 +136,12 @@ button {
 }
 
 .menu-icon__container {
-  --width-menuIcon__bars: calc(var(--fontSize) * 2.0);
+  --width-menuIcon__bars: calc(var(--fontSize) * 2);
   --height-menuIcon__bar: calc(var(--fontSize) / 6);
   --height-menuIcon__bars: calc(var(--height-menuIcon__bar) * 8);
-  --margin-menuIcon-bar--middle: calc((var(--height-menuIcon__bars) - 3 * var(--height-menuIcon__bar)) / 2);
+  --margin-menuIcon-bar--middle: calc(
+    (var(--height-menuIcon__bars) - 3 * var(--height-menuIcon__bar)) / 2
+  );
 
   display: inline-block;
   width: var(--width-menuIcon__bars);
@@ -130,16 +158,38 @@ button {
   margin: var(--margin-menuIcon-bar--middle) 0em;
 }
 
-.navbar li {
-  padding: 0.3rem;
-  text-align: center;
+.nav-btn {
+  width: 100%;
 }
 
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav__item {
+  display: inline-block;
+  font-size: 1.125rem;
+  width: 100%;
+  padding: 0.4rem 1.4rem;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 21px;
+  letter-spacing: 1.75px;
+}
+
+.nav__item:hover {
+  font-weight: bold;
+  color: var(--colorFont_light);
+  background-color: var(--colorBG_dark);
+}
 
 /*************************
     C O N T E N T S
 *************************/
-.contents, main {
+.contents,
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +202,7 @@ button {
 }
 
 .services > .section-details ul li {
-  margin-left: 2.0rem;
+  margin-left: 2rem;
   list-style-type: square;
 }
 
@@ -167,7 +217,7 @@ button {
 }
 
 .service-item__title {
-  font-size: 2.0rem;
+  font-size: 2rem;
   position: absolute;
   z-index: 4;
   color: var(--colorFont_light);
@@ -175,7 +225,8 @@ button {
   filter: drop-shadow(0 0 0.4em black);
 }
 
-.service-item__picture, img {
+.service-item__picture,
+img {
   width: 100%;
 }
 
@@ -188,7 +239,6 @@ button {
 .contact-us__city {
   margin: 0;
 }
-
 
 /*************************
          FOOTER
