@@ -86,8 +86,8 @@ button {
 .header-container {
   margin-bottom: 0.6rem;
   position: sticky;
-  z-index: 100;
   top: 0;
+  z-index: 100;
 }
 
 .header {
@@ -102,11 +102,11 @@ button {
 }
 
 .header__logo {
-  width: fit-content;
+  width: 60%;
 }
 
 .header__logo > .logo {
-  width: 70%;
+  width: 100%;
 }
 
 /* +++ Menu icon adjustments in the header +++ */
@@ -237,7 +237,22 @@ img {
 .contact-us__email,
 .contact-us__phone,
 .contact-us__city {
+  font-size: 1.125rem;
+  text-align: center;
   margin: 0;
+}
+
+.contact-us__photo {
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-around;
+  line-height: 1.8rem;
+}
+
+.contact-us__photo img {
+  width: 26%;
+  max-width: 4cm;
+  margin-bottom: 0.4rem;
 }
 
 /*************************
