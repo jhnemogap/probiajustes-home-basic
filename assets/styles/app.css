@@ -39,6 +39,7 @@ body {
 
 p {
   margin-bottom: 0.5em;
+  line-height: 1.5rem;
 }
 
 li {
@@ -209,6 +210,10 @@ main {
 /*************************
     PRINCIPAL SECTIONS
 *************************/
+.services .section-details p {
+  text-align: left;
+}
+
 .service-item {
   position: relative;
   display: flex;
@@ -238,20 +243,21 @@ img {
 .contact-us__phone,
 .contact-us__city {
   font-size: 1.125rem;
-  text-align: center;
   margin: 0;
+  text-align: center;
+  line-height: 1.8rem;
 }
 
 .contact-us__photo {
   margin-bottom: 0.6rem;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 22% auto;
+  column-gap: 1rem;
   line-height: 1.8rem;
 }
 
 .contact-us__photo img {
-  width: 26%;
-  max-width: 4cm;
+  width: 100%;
   margin-bottom: 0.4rem;
 }
 
