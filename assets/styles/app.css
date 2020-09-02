@@ -24,7 +24,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  line-height: 1.2em;
+  line-height: 1.5em;
+}
+
+html {
+  font-size: var(--fontSize);
 }
 
 body {
@@ -39,7 +43,7 @@ body {
 
 p {
   margin-bottom: 0.5em;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 
 li {
@@ -56,7 +60,7 @@ a:visited {
 }
 
 small {
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
 
 .title-section {
@@ -270,10 +274,6 @@ img {
   color: var(--colorFont_light);
 }
 
-.footer small {
-  font-size: 0.75rem;
-}
-
 .footer__copyright {
   padding: 1rem;
   text-align: center;
@@ -281,4 +281,65 @@ img {
 
 .footer__copyright-makeBy a {
   color: var(--colorFont_light);
+}
+
+/************************
+    MEDIA QUERIES
+************************/
+
+@media screen and (min-width:419px) {
+  .contents {
+    width: 90%;
+    margin: 0 auto;
+  }
+ 
+  .contact-us__photo {
+    grid-template-columns: 28% auto;
+    align-items: center;
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width:519px) {
+  :root {
+    --fontSize: 18px;
+  }
+
+  .contents {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width:619px) {
+  .contents {
+    width: 76%;
+  }
+
+  .hidden-in-mobile {
+    display: block;
+  }
+
+  .service-item ~ p {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width:719px) {
+  :root {
+    --fontSize: 20px;
+  }
+}
+
+@media screen and (min-width:1023px) {
+  :root {
+    --fontSize: 22px;
+  }
+
+  .contents {
+    width: 70%;
+  }
+
+  .service-item__picture {
+    width: 80%;
+  }
 }
