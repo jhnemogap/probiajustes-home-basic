@@ -12,7 +12,7 @@
   --colorBG_light: #fbfbff;
   --colorBG_dark: var(--colorBrand_first);
   --colorFont_light: #ebeff0;
-  --colorFont_dark: #12212e;
+  --colorFont_dark: #03325ce;
 }
 
 /*************************
@@ -215,8 +215,8 @@ main {
 /*************************
     PRINCIPAL SECTIONS
 *************************/
-.services .section-details p {
-  text-align: left;
+.services p {
+  text-align: justify;
 }
 
 .service-item {
