@@ -18,7 +18,10 @@
             src="assets/img/logo-probiajustes.png"
             alt="Logo ProbiAjustes"
             class="logo"
-           />  
+           />
+          <figcaption class="logo-caption hidden-in-mobile">
+            Ajustes de Pérdidas de Seguros
+          </figcaption>
         </figure> 
   
         <div class="header__menu-icon">
@@ -273,7 +276,7 @@
     const $btnNav = document.getElementById('nav-btn');
     const $headerNav = document.getElementById('header__nav');
 
-    // Adding listening events to menu buttons and all nav
+    // Add listeners events to menu button and all nav
     $btnMenuIcon.addEventListener('click', function(){ doVisibleNav($headerNav) });
     $btnNav.addEventListener('click', function(){ doVisibleNav($headerNav) });
   </script>

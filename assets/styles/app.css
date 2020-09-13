@@ -97,22 +97,33 @@ button {
 
 .header {
   display: grid;
-  grid-template: 1fr auto / auto 1fr auto;
+  grid-template: 1fr auto / 1.2fr 3.0fr 0.8fr;
+  justify-items: center;
+  justify-content: space-around;
   column-gap: 1em;
   row-gap: 0.1em;
   padding: 0.5rem 2rem 0em;
-  justify-content: space-around;
   background-color: #fefeff;
   box-shadow: 0px 0.2rem 0.4rem 0px var(--colorBrand_second--2);
 }
 
 .header__logo {
-  width: 60%;
+  width: 100%;
   height: fit-content;
+  text-align: center;
 }
 
-.header__logo > .logo {
+.logo {
   width: 100%;
+}
+
+.logo-caption {
+  font-family: Tahoma, 'Segoe UI', 'Geneva', Verdana, sans-serif;
+  font-size: 0.75rem;
+  color: var(--colorFont_dark);
+  text-align: center;
+  position: relative;
+  top: -0.6rem;
 }
 
 /* +++ Menu icon adjustments in the header +++ */
@@ -235,7 +246,6 @@ main {
   filter: drop-shadow(0 0 0.4em black);
 }
 
-
 .service-item__picture {
   width: 80%;
 }
@@ -339,11 +349,46 @@ main {
   .service-item ~ p {
     margin-top: 1rem;
   }
+
+  .logo-caption {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width:719px) {
   :root {
     --fontSize: 20px;
+  }
+
+  .header {
+    grid-template: 1fr / 8rem auto 1fr;
+    padding: 0.5rem 4rem 0rem;
+  }
+
+  .header__menu-icon {
+    display: none;
+  }
+
+  .header__nav {
+    grid-row-start: 1;
+    grid-column: 3 / 3;
+    margin: auto 0 auto auto;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .nav__item {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: auto;
+    padding: 1rem 0.8rem;
+  }
+  
+  .hidden-toggle {
+    display: block;
   }
 }
 
