@@ -9,7 +9,7 @@
   --colorBrand_second: #00a49d;
   --colorBrand_first--2: #16365c;
   --colorBrand_second--2: #27b3a2;
-  --colorBG_light: #fbfbff;
+  --colorBG_light: #f6f6f6;
   --colorBG_dark: var(--colorBrand_first);
   --colorFont_light: #ebeff0;
   --colorFont_dark: #03325ce;
@@ -93,18 +93,17 @@ button {
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0px 0.2rem 0.4rem 0px var(--colorBrand_second--2);
 }
 
 .header {
   display: grid;
   grid-template: 1fr auto / 1.2fr 3.0fr 0.8fr;
   justify-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   column-gap: 1em;
   row-gap: 0.1em;
   padding: 0.5rem 2rem 0em;
-  background-color: #fefeff;
-  box-shadow: 0px 0.2rem 0.4rem 0px var(--colorBrand_second--2);
 }
 
 .header__logo {
@@ -350,15 +349,35 @@ main {
   }
 }
 
-@media screen and (min-width:719px) {
+@media screen and (min-width:767px) {
   :root {
     --fontSize: 20px;
   }
 
   .header {
+    width: 74%;
+    padding: 0.5rem 0rem 0rem;
+    margin: auto;
     grid-template: 1fr / 30% auto auto;
-    padding: 0.5rem 4rem 0rem;
   }
+
+  .hidden-in-mobile {
+    display: block;
+  }
+}
+
+@media screen and (min-width:1023px) {
+  :root {
+    --fontSize: 22px;
+  }
+
+  .header-container {
+    background-image: linear-gradient(to right, rgb(255 255 255) 30%, #52e8e2);
+  }
+
+  /* .header {
+    grid-template: 1fr / 12rem auto 1fr;
+  } */
 
   .header__menu-icon {
     display: none;
@@ -384,20 +403,6 @@ main {
   
   .hidden-toggle {
     display: block;
-  }
-
-  .hidden-in-mobile {
-    display: block;
-  }
-}
-
-@media screen and (min-width:1023px) {
-  :root {
-    --fontSize: 22px;
-  }
-
-  .header {
-    grid-template: 1fr / 12rem auto 1fr;
   }
 
   .section-details {
